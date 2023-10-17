@@ -1,10 +1,11 @@
 package Modele;
 
 import Enumeration.CampEnum;
+import Enumeration.RoleEnum;
 
 public class Role {
     protected CampEnum camp;
-
+    protected RoleEnum roleEnum;
     protected Joueur joueur;
 
     public Role(CampEnum camp) {
