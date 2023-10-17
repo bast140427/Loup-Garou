@@ -1,8 +1,11 @@
 package Modele;
 
+import java.util.Map;
+
 public class Joueur {
     private boolean enVie;
     private boolean actif;
+    private Joueur amoureux;
     private int nbVoteContre;
     private Role role;
 
@@ -11,6 +14,14 @@ public class Joueur {
         this.enVie = true;
         this.actif = true;
         this.nbVoteContre = 0;
+        this.role = role;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
         this.role = role;
     }
 
@@ -36,6 +47,18 @@ public class Joueur {
 
     public void addVoteContre() {
         nbVoteContre++;
+    }
+
+    public Joueur getAmoureux() {
+        return amoureux;
+    }
+
+    public void setAmoureux(Joueur amoureux) {
+        this.amoureux = amoureux;
+    }
+
+    public void setNbVoteContre(int nbVoteContre) {
+        this.nbVoteContre = nbVoteContre;
     }
 
     public void voter(Joueur j) {

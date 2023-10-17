@@ -19,13 +19,21 @@ public class Sorciere extends Role{
         return soin;
     }
 
+    public void viderPoison() {
+        poison = false;
+    }
+
+    public void viderSoin() {
+        soin = false;
+    }
+
     public void empoisonner(Joueur j) {
-        if(poison) {
+        if(isPoison()) {
             if(!j.isEnVie()) {
                 System.out.println("Impossible d'empoisonner un joueur déjà éliminé");
             }else{
                 j.setEnVie(false);
-                poison = false;
+                viderPoison();
             }
         }else{
             System.out.println("Potion de poison déjà utilisée");
@@ -34,12 +42,12 @@ public class Sorciere extends Role{
     }
 
     public void soigner(Joueur j) {
-        if(soin) {
+        if(isSoin()) {
             if(j.isEnVie()) {
                 System.out.println("Impossible de soigner un joueur déjà en vie");
             }else{
                 j.setEnVie(true);
-                soin = false;
+                viderSoin();
             }
         }else{
             System.out.println("Potion de soin déjà utilisée");
