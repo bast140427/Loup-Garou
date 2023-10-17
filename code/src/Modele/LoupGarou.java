@@ -8,7 +8,12 @@ public class LoupGarou extends Role{
     }
 
     public void manger(Joueur j) {
-        j.addVoteContre();
+        if(!j.isEnVie()) {
+            System.out.println("Le joueur n'est plus en vie");
+        }else{
+            j.addVoteContre();
+        }
+
     }
 
 }
