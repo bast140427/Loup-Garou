@@ -9,11 +9,14 @@ public class Joueur {
     private int nbVoteContre;
     private Role role;
 
+    private String pseudo;
+
     //TODO : un Joueur doit être construit avec un rôle
-    public Joueur(Role role) {
+    public Joueur(String pseudo, Role role) {
         this.enVie = true;
         this.actif = true;
         this.nbVoteContre = 0;
+        this.pseudo = pseudo;
         this.role = role;
     }
 
@@ -71,6 +74,10 @@ public class Joueur {
 
     public void seReveiller() {
         this.setActif(true);
+    }
+
+    public void resetVote() {
+        this.nbVoteContre = 0;
     }
 
     //TODO : méthode pour parler dans un futur chat
