@@ -81,12 +81,4 @@ public class Jeu {
             return null;
         }
     }
-
-    public boolean estFini() {
-        return this.getGagnant() != null;
-    }
-
-
-
-
 }
