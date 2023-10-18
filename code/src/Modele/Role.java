@@ -4,9 +4,9 @@ import Enumeration.CampEnum;
 import Enumeration.RoleEnum;
 
 public class Role {
-    protected CampEnum camp;
-    protected RoleEnum roleEnum;
-    protected Joueur joueur;
+    private CampEnum camp;
+    private RoleEnum roleEnum;
+    private Joueur joueur;
 
     public Role(CampEnum camp) {
         this.camp = camp;
